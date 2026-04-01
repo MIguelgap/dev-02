@@ -1,0 +1,189 @@
+desafio 1= #include <iostream>
+using namespace std;
+
+
+int somaVetor(int v[], int tamanho) {
+    int soma = 0;
+    
+    for(int i = 0; i < tamanho; i++) {
+        soma += v[i];
+    }
+    
+    return soma;
+}
+
+int main() {
+    int vetor[5];
+    
+    
+    cout << "Digite 5 valores:\n";
+    for(int i = 0; i < 5; i++) {
+        cin >> vetor[i];
+    }
+    
+
+    int resultado = somaVetor(vetor, 5);
+    
+
+    cout << "A soma dos elementos do vetor sera: " << resultado << endl;
+    
+    return 0;
+}
+desafio 2= #include <iostream>
+using namespace std;
+
+
+string concatenar(string nome, string sobrenome) {
+    return nome + " " + sobrenome;
+}
+
+int main() {
+    string nome, sobrenome, nomeCompleto;
+
+ 
+    cout << "Digite o nome: ";
+    cin >> nome;
+
+    cout << "Digite o sobrenome: ";
+    cin >> sobrenome;
+
+    
+    nomeCompleto = concatenar(nome, sobrenome);
+
+
+    cout << "Nome completo : " << nomeCompleto << endl;
+
+    return 0;
+}
+desafio 3= #include <iostream>
+using namespace std;
+
+
+string concatenar(string nome, string sobrenome) {
+    return nome + " " + sobrenome;
+}
+
+
+int somaVetor(int v[], int tamanho) {
+    int soma = 0;
+    for(int i = 0; i < tamanho; i++) {
+        soma += v[i];
+    }
+    return soma;
+}
+
+
+int subtraiVetor(int v[], int tamanho) {
+    int resultado = v[0];
+    for(int i = 1; i < tamanho; i++) {
+        resultado -= v[i];
+    }
+    return resultado;
+}
+
+
+int multiplicaVetor(int v[], int tamanho) {
+    int resultado = 1;
+    for(int i = 0; i < tamanho; i++) {
+        resultado *= v[i];
+    }
+    return resultado;
+}
+
+int main() {
+    string nome, sobrenome, nomeCompleto;
+    int vetor[5];
+
+
+    cout << "Digite o nome: ";
+    cin >> nome;
+
+    cout << "Digite o sobrenome: ";
+    cin >> sobrenome;
+
+    
+    nomeCompleto = concatenar(nome, sobrenome);
+    cout << "Nome completo sera: " << nomeCompleto << endl;
+
+    
+    cout << "\nDigite 5 valores inteiros:\n";
+    for(int i = 0; i < 5; i++) {
+        cin >> vetor[i];
+    }
+
+   
+    cout << "Soma: " << somaVetor(vetor, 5) << endl;
+    cout << "Subtracao: " << subtraiVetor(vetor, 5) << endl;
+    cout << "Multiplicacao: " << multiplicaVetor(vetor, 5) << endl;
+
+    return 0;
+}
+desafio 4= #include <iostream>
+using namespace std;
+
+
+int maiorElemento(int v[], int tamanho) {
+    int maior = v[0]; 
+
+    for(int i = 1; i < tamanho; i++) {
+        if(v[i] > maior) {
+            maior = v[i];
+        }
+    }
+
+    return maior;
+}
+
+int main() {
+    int vetor[5];
+
+ 
+    cout << "Digite 5 valores inteiros:\n";
+    for(int i = 0; i < 5; i++) {
+        cin >> vetor[i];
+    }
+
+    
+    int maior = maiorElemento(vetor, 5);
+
+    cout << "O maior valor do vetor sera: " << maior << endl;
+
+    return 0;
+}
+desafio 5= #include <iostream>
+using namespace std;
+
+
+int produtoEscalar(int v1[], int v2[], int tamanho) {
+    int resultado = 0;
+
+    for(int i = 0; i < tamanho; i++) {
+        resultado += v1[i] * v2[i];
+    }
+
+    return resultado;
+}
+
+int main() {
+    int vetor1[5], vetor2[5];
+
+
+    cout << "Digite 5 valores para o primeiro vetor:\n";
+    for(int i = 0; i < 5; i++) {
+        cin >> vetor1[i];
+    }
+
+    
+    cout << "Digite 5 valores para o segundo vetor:\n";
+    for(int i = 0; i < 5; i++) {
+        cin >> vetor2[i];
+    }
+
+
+    int resultado = produtoEscalar(vetor1, vetor2, 5);
+
+  
+    cout << "O produto escalar e: " << resultado << endl;
+
+    return 0;
+}
