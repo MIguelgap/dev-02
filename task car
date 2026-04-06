@@ -1,0 +1,84 @@
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+class Carro {
+private:
+    string tipo;
+    int marca;       
+    string pais;
+    string velocidade;
+
+public:
+    
+    Carro(string tipo, int marca, string pais, string velocidade) {
+        this->tipo = tipo;
+        this->marca = marca;
+        this->pais = pais;
+        this->velocidade = velocidade;
+    }
+
+
+    void setTipo(string novoTipo) {
+        tipo = novoTipo;
+    }
+
+    string getTipo() {
+        return tipo;
+    }
+
+   
+    void setMarca(int novaMarca) {
+        marca = novaMarca;
+    }
+
+    int getMarca() {
+        return marca;
+    }
+
+    
+    void setPais(string novoPais) {
+        pais = novoPais;
+    }
+
+    string getPais() {
+        return pais;
+    }
+
+ 
+    void setVelocidade(string novaVelocidade) {
+        velocidade = novaVelocidade;
+    }
+
+    string getVelocidade() {
+        return velocidade;
+    }
+
+   
+    void mostrarInfo() {
+        cout << "Tipo: " << tipo << endl;
+        cout << "Marca: " << marca << endl;     
+        cout << "País: " << pais << endl;
+        cout << "Velocidade: " << velocidade << endl;
+    }
+};
+
+
+int main() {
+   
+    Carro c1("Esportivo", 1964, "EUA", "230 km/h");   
+
+    cout << "=== Informações do Carro ===" << endl;
+    c1.mostrarInfo();
+
+  
+    cout << "\n=== Após alterações ===" << endl;
+    c1.setTipo("Muscle Car");
+    c1.setMarca(1970);           
+    c1.setVelocidade("250 km/h");
+    
+    c1.mostrarInfo();
+
+    return 0;
+}
